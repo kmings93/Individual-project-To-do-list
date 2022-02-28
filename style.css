@@ -1,0 +1,85 @@
+html {
+  background: linear-gradient(to left, #94b49f, #b4cfb0, white);
+  width: 100%;
+  height: 100%;
+}
+
+ol {
+  background-color: aliceblue;
+  border-radius: 2%;
+  width: 70%;
+  margin: 50px auto;
+  padding: 20px;
+  /* display: flex;
+    text-align: center;
+    flex-direction: column;
+    flex-wrap: wrap; */
+}
+
+.container {
+  /* border-color: red; */
+  margin: 50px, auto;
+  text-align: center;
+}
+
+#completeBtn {
+  /* background-color: green;
+    text-decoration: line-through; */
+  background-color: #34c759;
+  border-radius: 10%;
+  color: white;
+  margin: 0px;
+  position: absolute;
+  right: 70px;
+}
+
+#deleteBtn {
+  background-color: #ff3b30;
+  color: white;
+  border-radius: 10%;
+  margin: 0px;
+  position: absolute;
+  right: 0px;
+}
+
+#paragraph {
+  max-width: 30%;
+  margin: 0px;
+  position: absolute;
+  word-wrap: break-word;
+  text-align: left;
+  /* display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; */
+}
+
+#spanDate {
+  position: absolute;
+  margin: 0px;
+}
+
+.checkTwo {
+  /* background-color: green; */
+  /* text-decoration: line-through; */
+  font-family: Garamond, serif;
+  color: #16e449;
+  transition: 0.5s;
+  /* transpar  ent: 50%; */
+  opacity: 30%;
+}
+
+.inner-container {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 5%;
+}
+
+.toDoList {
+  position: relative;
+  height: 50px;
+  margin: 20px;
+  /* display: flex; */
+  /* justify-content: space-evenly;
+    flex-basis: auto;
+    align-items: center; */
+}
