@@ -14,12 +14,6 @@ let createList = () => {
     spanDate.classList.toggle("checkTwo");
   });
 
-  if (addDescription == "" || addDate == "") {
-    alert("Please fill out task");
-  } else {
-    console.log("success");
-  }
-
   const paragraph = document.createElement("p"); // create paragraph for the button
   paragraph.id = "paragraph";
   paragraph.textContent = addDescription; // use textContent to set the input field of the text
@@ -46,6 +40,31 @@ let createList = () => {
   li.appendChild(remove);
   list.appendChild(li);
 
+  // Note: we need to put if statement below the list.appendChild, otherwise it will pop out still
+  // Test 1
+  // if (addDescription == "" || addDate == "") {
+  //   // document.getElementById("toDoList").appendChild(li).remove();
+  //   alert("Please fill out task");
+  //   document.querySelector("#addButton").addEventListener("click", function (event) {
+  //     event.preventDefault();
+  //   });
+  //   // document.getElementById("toDoList").appendChild(li);
+  // } else {
+  //   // addButton.addEventListener("click", createList);
+  //   // document.getElementById("toDoList").appendChild(li);
+  //   console.log("success");
+  // }
+
+  //Test 2 : if statement must be inside the function to work.
+  // if (addDescription == "" || addDate == "") {
+  //   document.getElementById("toDoList").appendChild(li).remove();
+  //   alert("Please fill out task");
+  //   // document.getElementById("toDoList").appendChild(li);
+  // } else {
+  //   document.getElementById("toDoList").appendChild(li);
+  //   console.log("success");
+  // }
+
   document.querySelector("#myItems").value = ""; // Issue: To set empty value.
   document.querySelector("#myDates").value = ""; // Note: this allows the box to be empty
   //   addDescription = "";
@@ -53,10 +72,29 @@ let createList = () => {
   li.classList.add("toDoList"); // Add for CSS
 };
 
-addButton.addEventListener("click", createList); //addEventListener method:{object.addEventListener(event Listener, name of funtion)}
+// test 1 and 2
+// addButton.addEventListener("click", createList);
+
+//Test 3:
+addButton.addEventListener("click", function (event) {
+  if (document.querySelector("#myItems").value == "" || document.querySelector("#myDates").value == "") {
+    event.preventDefault();
+    alert("Please fill out task");
+  } else {
+    addButton.addEventListener("click", createList); //addEventListener method:{object.addEventListener(event Listener, name of funtion)}
+    console.log("success");
+  }
+});
 
 // Clear All button
 let removeAllBtn = document.getElementById("removeAllBtn");
 removeAllBtn.addEventListener("click", function () {
-  list.remove();
+  // list.remove(); // Note: Cannot place this as it deletes the whole list.
+  list.innerHTML = ""; // Note: Remove the text inside the list
 });
+
+/*
+inputText.setAttribute;
+em : screen itself
+use modal
+*/

@@ -44,10 +44,12 @@ ol {
 
 #paragraph {
   max-width: 30%;
+  height: 70px;
   margin: 0px;
   position: absolute;
   word-wrap: break-word;
   text-align: left;
+  overflow: auto; /*Scroll up down*/
   /* display: flex;
     flex-wrap: wrap;
     justify-content: flex-start; */
