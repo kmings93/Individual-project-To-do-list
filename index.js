@@ -79,6 +79,7 @@ let createList = () => {
 addButton.addEventListener("click", function (event) {
   if (document.querySelector("#myItems").value == "" || document.querySelector("#myDates").value == "") {
     event.preventDefault();
+    // document.getElementById("toDoList").appendChild(li).remove();
     alert("Please fill out task");
   } else {
     addButton.addEventListener("click", createList); //addEventListener method:{object.addEventListener(event Listener, name of funtion)}
