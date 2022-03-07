@@ -82,7 +82,8 @@ addButton.addEventListener("click", function (event) {
     // document.getElementById("toDoList").appendChild(li).remove();
     alert("Please fill out task");
   } else {
-    addButton.addEventListener("click", createList); //addEventListener method:{object.addEventListener(event Listener, name of funtion)}
+    //addButton.addEventListener("click", createList); //addEventListener method:{object.addEventListener(event Listener, name of funtion)}
+    createList();
     console.log("success");
   }
 });
